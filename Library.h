@@ -23,7 +23,7 @@ RTC_DATA_ATTR uint16_t sleepcount = 0;
 
 #include <esp_camera.h>
 camera_config_t config; //stores the camera configuration parameters
-//#include "Transfer.h"   //library of transfer functions
+#include "ARtransfer.h"   //library of transfer functions
 
 uint8_t *PSRAMptr;      //create a global pointer to the array to send, so all functions have access
 uint32_t available_PSRAM;
