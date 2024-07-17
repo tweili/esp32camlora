@@ -6,6 +6,11 @@
 *******************************************************************************************************/
 
 #define SD SD_MMC
+#define ENABLEMONITOR   //enable define to see progress messages in ARtransferIRQ.h
+#define PRINTSEGMENTNUM //enable to print segment numbers as transfer progresses
+#define ENABLEARRAYCRC  //enable this define to use and show CRCs
+//#define DISABLEPAYLOADCRC //enable this define if you want to not use packet payload CRC checking
+#define DEBUG           //enable this define to show data transfer debug info
 
 //updated pinouts for 'ESP32CAM_Long_Range_Wireless_Adapter PCB dated 271121
 //Note transistor driving the White LED on pin 4, or the LED needs to be removed

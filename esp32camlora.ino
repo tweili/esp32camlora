@@ -9,7 +9,7 @@ void setup()
 void loop()
 {
 // ***** Receiver ******
-//    WaitForArray();
+    WaitForArray();
 
 // ***** Transmitter ***
 
@@ -70,7 +70,8 @@ void loop()
 //    sendArray(DTsendArray, DTsendArrayL);
 
 // *** 3. send photo
+//
+//    takePhotoSend();
 
-    takePhtoSend();
-    delay(10000);
+//    delay(10000);
 }

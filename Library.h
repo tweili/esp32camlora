@@ -229,7 +229,7 @@ bool WaitForArray()
   setupLoRaDevice();
   Monitorport.println(F("LoRa file transfer receiver ready"));
 
-  ARreceiveArrayL = ARreceiveArrayNoACK(PSRAMptr, allocated_PSRAM, ReceiveTimeoutmS);
+  ARreceiveArrayL = ARreceiveArray(PSRAMptr, allocated_PSRAM, ReceiveTimeoutmS);
 
   SPI.end();
   digitalWrite(NSS, HIGH);
@@ -271,7 +271,7 @@ bool sendArray(uint8_t *array, uint32_t arrayL)
 
   pinMode(REDLED, OUTPUT);
   digitalWrite(REDLED,LOW);
-  sentOK = ARsendArrayNoACK(array, arrayL, command, strlen(command));
+  sentOK = ARsendArray(array, arrayL, command, strlen(command));
   digitalWrite(REDLED,HIGH);
   pinMode(REDLED, INPUT);  
   SPI.end();
